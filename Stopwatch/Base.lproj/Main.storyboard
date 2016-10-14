@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Stopwatch" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dBh-1N-Brb">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="luY-vz-bmT"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="xbA-L6-pMJ"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem systemItem="stop" id="lXW-tE-Tok">
+                                        <connections>
+                                            <action selector="reset:" destination="BYZ-38-t0r" id="k5k-Uf-JNI"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="XdK-ZB-oM4"/>
+                                    <barButtonItem title="Item" systemItem="pause" id="4SL-KM-bUS">
+                                        <connections>
+                                            <action selector="pause:" destination="BYZ-38-t0r" id="WFI-W7-K4Y"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uqd-aY-N9N">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="44" id="5ib-1S-ZRO"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="44" id="CDK-Un-F4H"/>
+                                    <constraint firstAttribute="height" constant="44" id="RQ4-G0-bbV"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="Sdg-OZ-Bq8"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="Stopwatch" id="qtB-i5-Lmd">
+                                        <barButtonItem key="rightBarButtonItem" systemItem="play" id="j9U-Yb-QUX">
+                                            <connections>
+                                                <action selector="play:" destination="BYZ-38-t0r" id="emK-yf-yNw"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zoh-as-epR">
+                                <rect key="frame" x="240" y="254" width="120" height="91"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="147" id="EBM-Vp-O98"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="156" id="b7t-az-Uuw"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="147" id="g4o-gB-NQN"/>
+                                    <constraint firstAttribute="height" constant="147" id="lcc-uw-eyL"/>
+                                    <constraint firstAttribute="width" constant="156" id="uUg-Br-Q6E"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="78"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="zoh-as-epR" firstAttribute="top" secondItem="Uqd-aY-N9N" secondAttribute="bottom" constant="162" id="3ca-Ft-Trn"/>
+                            <constraint firstItem="Uqd-aY-N9N" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="43B-iR-lzM"/>
+                            <constraint firstItem="Uqd-aY-N9N" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="4gx-vc-E4v"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Uqd-aY-N9N" secondAttribute="trailing" constant="-33" id="5wf-X3-I9l"/>
+                            <constraint firstItem="Uqd-aY-N9N" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="9T8-D0-fSb"/>
+                            <constraint firstItem="zoh-as-epR" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Ci8-oX-8WL"/>
+                            <constraint firstItem="dBh-1N-Brb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="FgI-Rd-5ZA"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Uqd-aY-N9N" secondAttribute="trailing" constant="-20" id="H2K-W6-XfT"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="dBh-1N-Brb" secondAttribute="bottom" id="Jf4-MX-ouC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="zoh-as-epR" secondAttribute="trailing" constant="202" id="Jxz-3M-Y0B"/>
+                            <constraint firstItem="Uqd-aY-N9N" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="MRB-nK-wf6"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Uqd-aY-N9N" secondAttribute="trailing" constant="-20" id="NQ5-qI-tNW"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="dBh-1N-Brb" secondAttribute="bottom" id="OHP-xI-mJG"/>
+                            <constraint firstItem="zoh-as-epR" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="QkX-ob-l9U"/>
+                            <constraint firstItem="zoh-as-epR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="202" id="ScG-ka-MSn"/>
+                            <constraint firstItem="zoh-as-epR" firstAttribute="top" secondItem="Uqd-aY-N9N" secondAttribute="bottom" constant="162" id="SoD-n8-FX2"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="zoh-as-epR" secondAttribute="trailing" constant="202" id="TWH-qY-VLq"/>
+                            <constraint firstItem="dBh-1N-Brb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="VJP-Jx-tJU"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dBh-1N-Brb" secondAttribute="trailing" constant="-20" id="Vnr-Vt-r0E"/>
+                            <constraint firstItem="dBh-1N-Brb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Wab-U3-Lri"/>
+                            <constraint firstItem="zoh-as-epR" firstAttribute="top" secondItem="Uqd-aY-N9N" secondAttribute="bottom" constant="162" id="ZsW-JM-bka"/>
+                            <constraint firstItem="Uqd-aY-N9N" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-7" id="aFP-se-Q0p"/>
+                            <constraint firstItem="Uqd-aY-N9N" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="adJ-8O-3lB"/>
+                            <constraint firstItem="zoh-as-epR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="202" id="adb-Vt-RLd"/>
+                            <constraint firstItem="Uqd-aY-N9N" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ems-IG-Xmz"/>
+                            <constraint firstItem="Uqd-aY-N9N" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="i9A-rU-yiI"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Uqd-aY-N9N" secondAttribute="trailing" constant="-20" id="ips-br-I2A"/>
+                            <constraint firstItem="zoh-as-epR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lTF-Zh-NIh"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dBh-1N-Brb" secondAttribute="trailing" constant="-20" id="ppZ-1r-qJZ"/>
+                            <constraint firstItem="zoh-as-epR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xWZ-y0-KNR"/>
+                            <constraint firstItem="dBh-1N-Brb" firstAttribute="top" secondItem="zoh-as-epR" secondAttribute="bottom" constant="183" id="ywn-dC-jNt"/>
+                            <constraint firstItem="Uqd-aY-N9N" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="zR3-UA-Pm9"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="timerLabel" destination="zoh-as-epR" id="aMj-hE-KwR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="355" y="107"/>
+        </scene>
+    </scenes>
+</document>
